@@ -1,4 +1,27 @@
-# Issue
+# Custom loader for Glide 4
+_(Note that this does not work for Glide 3.x)_
+
+Example project of how to implement a custom loader for Glide 4. This can be used to load any class with glide.
+This example enables Glide to load an instance of `Palette` and produce a bitmap resource based on that instance.
+
+```
+data class Palette(val topLeft: Int,
+                   val topRight: Int,
+                   val bottomRight: Int,
+                   val bottomLeft: Int)
+```
+The same concept can be applied for other classes to fit your need.
+
+
+## Dependencies 
+**Glide 4.3.1 or newer.** 
+4.3.0 and older versions will result in the crash below.
+
+## Running the sample app
+The sample app will load a <span style="color:green">green</span> image.
+ 
+ There is a <span style="color:yellow">TODO</span> added to indicate where any bitmap can be used.
+## Issue using Glide versions prior to 4.3.1
 
 The app crashes with `java.lang.IllegalStateException: Can't compress a recycled bitmap`
 
